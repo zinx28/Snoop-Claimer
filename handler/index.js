@@ -36,7 +36,7 @@ module.exports = async (client, token) => {
 		console.log('Cloud Guff Clamier Is online!');
 		client.user.setPresence({ activities: [{ name: "Claiming Guff", type: ActivityType.Playing }] })
 		await client.guilds.cache.get("1037461554456690788").commands.set(arrayOfSlashCommands);
-
+		// ^^^ change the id to your server/guild id
 		// all servers 
 		// await client.application.commands.set(arrayOfSlashCommands);
 	});
