@@ -22,7 +22,7 @@ module.exports = {
 		);
 		row.addComponents(new ButtonBuilder()
 				.setLabel('Auth Link!')
-				.setURL('https://www.epicgames.com/id/api/redirect?clientId=3446cd72694c4a4485d81b77adbb2141&responseType=code')
+				.setURL('https://www.epicgames.com/id/api/redirect?clientId=af43dc71dd91452396fcdffbd7a8e8a9&responseType=code&redirectUrl=eos.af43dc71dd91452396fcdffbd7a8e8a9://epic/auth')
 				.setStyle(ButtonStyle.Link)
 		);
 

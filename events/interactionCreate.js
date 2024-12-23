@@ -62,7 +62,7 @@ module.exports = async (client) => {
 							"method": "POST",
 							"headers": {
 								'Content-Type': 'application/x-www-form-urlencoded',
-								'Authorization': 'basic MzQ0NmNkNzI2OTRjNGE0NDg1ZDgxYjc3YWRiYjIxNDE6OTIwOWQ0YTVlMjVhNDU3ZmI5YjA3NDg5ZDMxM2I0MWE='
+								'Authorization': 'basic YWY0M2RjNzFkZDkxNDUyMzk2ZmNkZmZiZDdhOGU4YTk6NFlYdlNFQkxGUlBMaDFoekdaQWtmT2k1bXF1cEZvaFo='
 							},
 
 							form: {
@@ -71,6 +71,7 @@ module.exports = async (client) => {
 							}
 						}
 						request(auth_request, async function(error, response) {
+							console.log(response.body);
 							const refresh_token = JSON.parse(response.body)['refresh_token']
 							const accessToken = JSON.parse(response.body)['access_token']
 							const accountId = JSON.parse(response.body)['account_id']
@@ -80,7 +81,7 @@ module.exports = async (client) => {
 							const row = new ActionRowBuilder();
 							row.addComponents(new ButtonBuilder()
 								.setLabel('Click me!')
-								.setURL('https://www.epicgames.com/id/api/redirect?clientId=3446cd72694c4a4485d81b77adbb2141&responseType=code')
+								.setURL('https://www.epicgames.com/id/api/redirect?clientId=af43dc71dd91452396fcdffbd7a8e8a9&responseType=code&redirectUrl=eos.af43dc71dd91452396fcdffbd7a8e8a9://epic/auth')
 								.setStyle(ButtonStyle.Link)
 							);
 							if (errorCode == "errors.com.epicgames.account.oauth.authorization_code_not_for_your_client") {

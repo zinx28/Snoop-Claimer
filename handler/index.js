@@ -3,7 +3,7 @@ const { promisify } = require("util");
 const { ActivityType } = require('discord.js');
 const fs = require("fs")
 const globPromise = promisify(glob);
-module.exports = async (client, token) => {
+module.exports = async (client, config) => {
 	fs.readdir("./events/", (err, files) => {
 		require(`../events/${files}`)(client)
 	})
@@ -33,9 +33,9 @@ module.exports = async (client, token) => {
 	client.on("ready", async () => {
 		// Register for a single guild
 		console.log(arrayOfSlashCommands)
-		console.log('Cloud Guff Clamier Is online!');
-		client.user.setPresence({ activities: [{ name: "Claiming Guff", type: ActivityType.Playing }] })
-		await client.guilds.cache.get("1037461554456690788").commands.set(arrayOfSlashCommands);
+		console.log('Snoop Clamier Is online!');
+		client.user.setPresence({ activities: [{ name: "Claiming Snoop", type: ActivityType.Playing }] })
+		await client.guilds.cache.get(config.DiscordServerID).commands.set(arrayOfSlashCommands);
 		// ^^^ change the id to your server/guild id
 		// all servers 
 		// await client.application.commands.set(arrayOfSlashCommands);

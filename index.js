@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const mongoose = require("mongoose");
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.DirectMessages] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
 client.config = require("./config.json");
 client.prefix = client.config.prefix;
@@ -14,6 +14,6 @@ client.aliases = new Collection()
 client.slashCommands = new Collection();
 client.buttons = new Collection();
 
-require("./handler")(client)
+require("./handler")(client, client.config)
 require("./mongoose")(mongoose)
 

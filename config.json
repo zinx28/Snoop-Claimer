@@ -1,5 +1,6 @@
 {
-	"token": "",
-	"mongooseConnectionString": "",
-	"prefix": "c!"
+	"token": "MTAzMDk3ODkyNTE4ODM2NjM1Ng.GMGyCl.tuiHiMzkevzvarNmU3pC09uEMnHfw1oGtTBPf0",
+	"mongooseConnectionString": "mongodb://127.0.0.1:27017/rizzler?authMechanism=DEFAULT",
+	"prefix": "c!",
+	"DiscordServerID": "1054156913845207181"
 }
