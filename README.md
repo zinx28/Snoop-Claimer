@@ -1,9 +1,9 @@
 # Snoop-Claimer
-Discord BOT with mongodb
+Fortnite Snoop Discord Bot with mongodb
 
-# Commands
-/login
-/claim
-/logout
+## Commands
+- /login
+- /claim
+- /logout
 
-# easier to use this time! (works on latest ig? maybe continue this bot with other things!)
+### easier to use this time! (fixed for latest!)
